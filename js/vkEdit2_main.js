@@ -523,13 +523,13 @@ function vkEdit_rowWrap_click(){
 	});
 }
 /*-------------------------------------------*/
-// Row Wrap ボタンが押された時の処理
+// 1st add row ボタンが押された時の処理
 /*-------------------------------------------*/
 jQuery('#vkEdit_editWrap').mouseenter(function(){
 	if ( !jQuery(this).children('div').hasClass('vkEdit_editPanel_firstAddrow') ){
 		var html_first_addRow_panel = '<div id="vkEdit_editPanel_firstAddrow" class="vkEdit_editPanel_firstAddrow">' + btn_row_add_down + '</div>';
 		jQuery(this).prepend(html_first_addRow_panel);
-		jQuery(this).find('.vkEdit_btn_addRow_down').click(function(){
+		jQuery('#vkEdit_editPanel_firstAddrow').find('.vkEdit_btn_addRow_down').click(function(){
 			jQuery(this).parent().after(html_rowDefaultSet);
 			vkEdit_row_action();
 			vkEdit_col_action();
