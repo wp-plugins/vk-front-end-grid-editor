@@ -35,7 +35,7 @@ $col_bg_active : #ffffcc;
 .vkEdit_editPanel_col { clear:both;display:block; overflow:hidden;background-color: $panel_color;padding: 0 8px 1px;
 	.vkEdit_btnSet_size { float:none;clear: both; }
 }
-.vkEdit_column_active textarea { display:block; overflow:hidden;width: 96%;padding:3px 2%;border:2px dotted #c00;min-height:5em; }
+.vkEdit_column_active textarea { display:block; overflow:hidden;width: 96%;padding:3px 2%;border:2px dotted #c00;height:6em; }
 
 #vkEdit_editPanel_firstAddrow { display:block; overflow:hidden;width:100%; }
 
