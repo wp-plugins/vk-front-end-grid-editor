@@ -3,7 +3,7 @@
  Plugin Name: VK Front-end Grid Editor
  Plugin URI: http://grid-editor.vektor-inc.co.jp/
  Description: This plugin can create Bootstrap grid layout on front-end.
- Version: 1.0.5
+ Version: 1.0.6
  Author: kurudrive @ Vektor,Inc
  Author URI: http://bizvektor.com/en/
  Domain Path: /languages
@@ -62,7 +62,7 @@ function vkEdit2_front_style_setup(){
         wp_enqueue_style( 'vkEdit2_style_setup_load_bootstrap_css', plugins_url('css/bootstrap.min.css', __FILE__) , false, '2015-04-19');
     }
 }
-add_action('wp_enqueue_scripts', 'vkEdit2_front_style_setup',1);
+add_action('wp_head', 'vkEdit2_front_style_setup');
 
 /*-------------------------------------------*/
 /*  Admin page _ Add editor css
