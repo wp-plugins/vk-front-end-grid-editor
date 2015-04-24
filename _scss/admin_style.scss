@@ -8,7 +8,7 @@ $rowPanel_color : #333;
 $col_bg_active : #ffffcc;
 
 
-#vkEdit_masterCtrlPanel { border:1px solid #468847 ; border-radius: 3px; padding: 10px;margin:10px 0;background-color: #dff0d8;box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);
+.vkEdit_masterCtrlPanel.row { border:1px solid #468847 ; border-radius: 3px; padding: 10px;margin:10px 0;background-color: #dff0d8;box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);
 		button { padding: 3px 10px;;color:#fff;border:none; border-radius: 3px; }
 		p { margin-bottom:0;color: #468847; }
 
@@ -35,7 +35,7 @@ $col_bg_active : #ffffcc;
 .vkEdit_editPanel_col { clear:both;display:block; overflow:hidden;background-color: $panel_color;padding: 0 8px 1px;
 	.vkEdit_btnSet_size { float:none;clear: both; }
 }
-.vkEdit_column_active textarea { display:block; overflow:hidden;width: 96%;padding:3px 2%;border:2px dotted #c00;height:6em; }
+.vkEdit_column_active textarea { display:block; overflow:hidden;width: 96%;padding:3px 2%;border:2px dotted #c00;height:250px; }
 
 #vkEdit_editPanel_firstAddrow { display:block; overflow:hidden;width:100%; }
 

@@ -3,7 +3,7 @@
  Plugin Name: VK Front-end Grid Editor
  Plugin URI: http://grid-editor.vektor-inc.co.jp/
  Description: This plugin can create Bootstrap grid layout on front-end.
- Version: 1.0.6
+ Version: 1.0.7
  Author: kurudrive @ Vektor,Inc
  Author URI: http://bizvektor.com/en/
  Domain Path: /languages
@@ -97,7 +97,7 @@ function content_edit() {
 ?>
 <script>
 function vkEdit_saveStart(){
-    jQuery('#vkEdit_masterCtrlPanel #submit').click(function(){
+    jQuery('.vkEdit_masterCtrlPanel #submit').click(function(){
 
         // 
         if( jQuery('#vkEdit_editWrap').find('div').hasClass('vkEdit_editPanel_col') ){
@@ -110,8 +110,10 @@ function vkEdit_saveStart(){
             var post_content = jQuery('#vkEdit_editWrap').html();
 
             // 保存ボタンをクリックされたらボタンを変更する
-            jQuery(this).after('<i class="fa fa-refresh" id="icon_refresh"></i>').remove();
-            jQuery('#vkEdit_masterCtrlPanel p').html('Saving...');
+            jQuery('.vkEdit_masterCtrlPanel').each(function(){
+                jQuery(this).find('#submit').after('<i class="fa fa-refresh" id="icon_refresh"></i>').remove();
+                jQuery(this).find('p').html('Saving...');
+            });
 
             // 編集パネルが消える前に保存されるのを防ぐために少し待つ
             setTimeout(function(){        
@@ -125,9 +127,9 @@ function vkEdit_saveStart(){
                         'post_content' : post_content,
                     },
                     success: function( response ){
-                        jQuery('#vkEdit_masterCtrlPanel i').remove();
-                        jQuery('#vkEdit_masterCtrlPanel').removeClass('vkEdit_masterCtrlPanel_alert');
-                        jQuery('#vkEdit_masterCtrlPanel p').html('Save was successfully.<br>Now Reloading...');
+                        jQuery('.vkEdit_masterCtrlPanel i').remove();
+                        jQuery('.vkEdit_masterCtrlPanel').removeClass('vkEdit_masterCtrlPanel_alert');
+                        jQuery('.vkEdit_masterCtrlPanel p').html('Save was successfully.<br>Now Reloading...');
                         jQuery('#vkEdit_editWrap').html(response);
                         location.reload();
                     }
